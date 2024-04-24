@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${raleway.variable} ${inter.variable}`}>
-      <body>
+      <body className="bg-[#F5F8FF]">
         <Header />
         <main>{children}</main>
         <Footer />

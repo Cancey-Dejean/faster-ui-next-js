@@ -27,7 +27,7 @@ const navLinks = [
 export default function Header() {
   const currentPath = usePathname();
   return (
-    <header className="py-4">
+    <header className="fixed top-0 z-50 w-full py-4">
       <Container className="flex items-center justify-between gap-4">
         <Link href="/">
           <svg
@@ -102,7 +102,7 @@ export default function Header() {
           <Button variant="ghost" asChild>
             <Link href="#">Sign In</Link>
           </Button>
-          <Button className="bg-[#4E47FF]" asChild>
+          <Button className="h-12 bg-[#4E47FF] px-9 font-bold" asChild>
             <Link href="#">Sign Up</Link>
           </Button>
         </div>

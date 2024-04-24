@@ -67,9 +67,9 @@
 }
 
 @layer base {
-  /* :root {
+  :root {
     --font-raleway: "Raleway", sans-serif;
-  } */
+  }
 
   * {
     @apply border-border;
@@ -83,5 +83,15 @@
   }
   main {
     @apply grow;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-raleway);
+    font-weight: 700;
   }
 }

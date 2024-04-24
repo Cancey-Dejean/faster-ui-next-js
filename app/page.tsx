@@ -1,9 +1,12 @@
+import Hero from "@/components/Hero";
+import WhatWeDo from "@/components/WhatWeDo";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <h1>Main Content</h1>
+      <Hero />
+      <WhatWeDo />
     </>
   );
 }
