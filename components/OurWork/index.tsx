@@ -1,7 +1,26 @@
+"use client";
 import Image from "next/image";
 import Container from "../Container";
+import useEmblaCarousel from "embla-carousel-react";
+
+import { useCallback, useState } from "react";
+import {
+  NextButton,
+  PrevButton,
+  usePrevNextButtons,
+} from "../EmblaCarouselArrowButtons";
+import ArrowCircle from "../Icons";
 
 export default function OurWork() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi);
+
   return (
     <section className="relative mb-[86px]">
       <Image
@@ -9,70 +28,85 @@ export default function OurWork() {
         width={799}
         height={841}
         alt=""
-        className="absolute left-1/2 top-0 z-[1] mx-auto -translate-x-1/2  mix-blend-color-burn"
+        className="absolute left-1/2 top-0 z-[-1] mx-auto -translate-x-1/2  mix-blend-color-burn"
       />
-      <Container className="mb-[57px]">
-        <div className="mx-auto flex max-w-[987px] items-center justify-between gap-4">
-          <button type="button">
-            <svg
-              width="78"
-              height="78"
-              viewBox="0 0 78 78"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+
+      <div className="embla three-slide m-auto">
+        <Container className="mb-[57px]">
+          <div className="mx-auto flex max-w-[987px] items-center justify-between gap-4">
+            <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled}>
+              <ArrowCircle />
+            </PrevButton>
+
+            <div className="text-center">
+              <h2 className="mb-9 text-6xl">Check our Work</h2>
+
+              <div className="max-w-[449px] text-sm text-[#8987A1]">
+                <p>
+                  Take a look at some of our recent projects to see how we've
+                  helped businesses like yours succeed online.
+                </p>
+              </div>
+            </div>
+
+            <NextButton
+              onClick={onNextButtonClick}
+              disabled={nextBtnDisabled}
+              className="embla__button embla__button--next rotate-180 disabled:opacity-50"
             >
-              <circle cx="39" cy="39" r="38.5" fill="white" stroke="white" />
-              <path
-                d="M46 39H32M32 39L35 42M32 39L35 36"
-                stroke="#252432"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
+              <ArrowCircle />
+            </NextButton>
+          </div>
+        </Container>
 
-          <div className="text-center">
-            <h2 className="mb-9 text-6xl">Check our Work</h2>
-
-            <div className="max-w-[449px] text-sm text-[#8987A1]">
-              <p>
-                Take a look at some of our recent projects to see how we've
-                helped businesses like yours succeed online.
-              </p>
+        <div className="embla__viewport overflow-hidden" ref={emblaRef}>
+          <div className="embla__container">
+            <div className="embla__slide">
+              <div className="mx-auto rounded-[10px] bg-white p-[34px]">
+                <Image
+                  src="/images/slider-img.jpg"
+                  width={800}
+                  height={800}
+                  alt=""
+                  className="w-full rounded-[5px] shadow-xl"
+                />
+              </div>
+            </div>
+            <div className="embla__slide">
+              <div className="mx-auto rounded-[10px] bg-white p-[34px]">
+                <Image
+                  src="/images/slider-img.jpg"
+                  width={800}
+                  height={800}
+                  alt=""
+                  className="w-full rounded-[5px] shadow-xl"
+                />
+              </div>
+            </div>
+            <div className="embla__slide">
+              <div className="mx-auto rounded-[10px] bg-white p-[34px]">
+                <Image
+                  src="/images/slider-img.jpg"
+                  width={800}
+                  height={800}
+                  alt=""
+                  className="w-full rounded-[5px] shadow-xl"
+                />
+              </div>
             </div>
           </div>
-
-          <button type="button" className="rotate-180">
-            <svg
-              width="78"
-              height="78"
-              viewBox="0 0 78 78"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="39" cy="39" r="38.5" fill="white" stroke="white" />
-              <path
-                d="M46 39H32M32 39L35 42M32 39L35 36"
-                stroke="#252432"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
         </div>
-      </Container>
+      </div>
 
-      <div className="mx-auto w-fit rounded-[10px] bg-white p-[34px] shadow-xl">
+      {/* <div className="mx-auto w-fit rounded-[10px] bg-white p-[34px] shadow-xl">
         <Image
           src="/images/slider-img.jpg"
           width={800}
           height={800}
           alt=""
-          className="mx-auto"
+          className="mx-auto rounded-[5px]"
         />
-      </div>
+      </div> */}
     </section>
   );
 }
