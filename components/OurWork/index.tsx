@@ -41,7 +41,7 @@ export default function OurWork() {
             <div className="text-center">
               <h2 className="mb-9 text-6xl">Check our Work</h2>
 
-              <div className="max-w-[449px] text-sm text-[#8987A1]">
+              <div className="max-w-[449px] text-sm">
                 <p>
                   Take a look at some of our recent projects to see how we've
                   helped businesses like yours succeed online.

@@ -85,7 +85,7 @@ export default function Header() {
                 <Link
                   href={link.href}
                   className={cn(
-                    "py-[22px] text-base text-[#8987A1]",
+                    "py-[22px] text-base",
                     currentPath === link.href
                       ? "font-bold text-[#252432]"
                       : "font-normal",

@@ -1,8 +1,7 @@
 import Hero from "@/components/Hero";
 import OurWork from "@/components/OurWork";
-import ReviewPill from "@/components/ReviewPill";
+import Pricing from "@/components/Pricing";
 import WhatWeDo from "@/components/WhatWeDo";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -10,6 +9,7 @@ export default function Home() {
       <Hero />
       <WhatWeDo />
       <OurWork />
+      <Pricing />
     </>
   );
 }

@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const raleway = Raleway({
   subsets: ["latin"],
   variable: "--font-raleway",
-  weight: ["400", "700", "900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 const inter = Inter({

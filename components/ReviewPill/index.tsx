@@ -51,7 +51,7 @@ export default function ReviewPill({ className }: ReviewPillProps) {
       </div>
 
       <div className="flex flex-col gap-1">
-        <div className="text-[#8987A1] [&_strong]:text-[#252432]">
+        <div className="[&_strong]:text-[#252432]">
           <p>
             <strong>5.0</strong> Based on <strong>145</strong> Reviews
           </p>

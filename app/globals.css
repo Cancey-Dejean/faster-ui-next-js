@@ -79,7 +79,7 @@
     font-family: var(--font-inter);
   }
   body {
-    @apply flex h-screen flex-col text-base;
+    @apply flex h-screen flex-col text-base text-[#8987A1];
   }
   main {
     @apply grow;
@@ -92,7 +92,8 @@
   h5,
   h6 {
     font-family: var(--font-raleway);
-    font-weight: 700;
+    font-weight: bold;
+    color: #252432;
   }
 
   /* Embla Styles */
@@ -120,5 +121,14 @@
     flex: 0 0 var(--slide-size);
     min-width: 0;
     padding-left: var(--slide-spacing);
+  }
+}
+
+@layer utilities {
+  .link-block {
+    position: relative;
+    & a {
+      @apply after:absolute after:inset-0 after:content-[''];
+    }
   }
 }

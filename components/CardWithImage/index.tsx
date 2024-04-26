@@ -19,7 +19,7 @@ export default function CardWithImage({
   return (
     <div
       className={cn(
-        "col-span-3 flex gap-8 rounded-[10px] bg-white px-[26px] py-[29px] text-[#8987A1]",
+        "col-span-3 flex gap-8 rounded-[10px] bg-white px-[26px] py-[29px]",
         className,
         direction === "vertical" ? "flex-col" : "flex-row",
       )}
