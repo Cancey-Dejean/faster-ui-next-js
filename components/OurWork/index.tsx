@@ -3,13 +3,13 @@ import Image from "next/image";
 import Container from "../Container";
 import useEmblaCarousel from "embla-carousel-react";
 
-import { useCallback, useState } from "react";
 import {
   NextButton,
   PrevButton,
   usePrevNextButtons,
 } from "../EmblaCarouselArrowButtons";
 import ArrowCircle from "../Icons";
+import ReviewPill from "../ReviewPill";
 
 export default function OurWork() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -22,7 +22,7 @@ export default function OurWork() {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section className="relative mb-[86px]">
+    <section className="relative">
       <Image
         src="/images/our-work-bg-img.png"
         width={799}
@@ -107,6 +107,9 @@ export default function OurWork() {
           className="mx-auto rounded-[5px]"
         />
       </div> */}
+      <Container className="flex items-center justify-center py-[86px]">
+        <ReviewPill />
+      </Container>
     </section>
   );
 }

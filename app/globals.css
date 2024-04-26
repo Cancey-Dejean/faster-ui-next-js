@@ -79,7 +79,7 @@
     font-family: var(--font-inter);
   }
   body {
-    @apply flex h-screen flex-col;
+    @apply flex h-screen flex-col text-base;
   }
   main {
     @apply grow;
@@ -112,7 +112,7 @@
   }
 
   .three-slide {
-    --slide-spacing: 1rem;
+    --slide-spacing: 2rem;
     --slide-size: 70%;
   }
 
