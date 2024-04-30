@@ -107,9 +107,9 @@ export default function OurWork() {
           className="mx-auto rounded-[5px]"
         />
       </div> */}
-      <Container className="flex items-center justify-center py-[86px]">
+      <div className="flex items-center justify-center py-[86px]">
         <ReviewPill />
-      </Container>
+      </div>
     </section>
   );
 }

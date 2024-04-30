@@ -1,3 +1,4 @@
+import Faq from "@/components/Faq";
 import Hero from "@/components/Hero";
 import OurWork from "@/components/OurWork";
 import Pricing from "@/components/Pricing";
@@ -10,6 +11,7 @@ export default function Home() {
       <WhatWeDo />
       <OurWork />
       <Pricing />
+      <Faq />
     </>
   );
 }
