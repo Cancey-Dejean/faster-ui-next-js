@@ -1,9 +1,7 @@
-import type { Metadata } from "next";
 import { Raleway, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { queryGlobalSettings } from "@/api/hygraph";
 
 const raleway = Raleway({
   subsets: ["latin"],
