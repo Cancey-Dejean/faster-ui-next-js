@@ -68,8 +68,8 @@ export default function Pricing() {
                   d="M5 12H19M19 12L16 15M19 12L16 9"
                   stroke="#252432"
                   stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </Link>
