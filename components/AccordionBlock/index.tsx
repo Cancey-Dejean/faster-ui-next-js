@@ -22,6 +22,7 @@ export function AccordionBlock({ data }: AccordionBlockProps) {
           <AccordionItem
             value={`item-${i}`}
             className=" rounded-[10px] border-0 bg-white [&[data-state=open]]:shadow-sm"
+            key={i}
           >
             <AccordionTrigger className="px-6 py-6 text-[18px] font-bold hover:no-underline [&[data-state=open]]:!pb-4">
               <span>{item.title}</span>
